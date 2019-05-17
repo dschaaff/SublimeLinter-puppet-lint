@@ -27,3 +27,21 @@ class PuppetLint(RubyLinter):
         r'(?P<message>.+)'
     )
     tempfile_suffix = '-'
+
+    def cmd(self):
+        """Build command, using bundle exec if the option is set."""
+
+        settings = self.get_view_settings()
+
+        command = []
+
+        if settings.get('use_bundle_exec', False):
+            command.extend(['bundle', 'exec'])
+
+        command.extend([
+            'puppet-lint',
+            '--log-format',
+            '%{line}:%{column}:%{kind}:%{message}',
+        ])
+
+        return command
