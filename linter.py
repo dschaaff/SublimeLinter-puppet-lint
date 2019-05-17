@@ -19,7 +19,8 @@ class PuppetLint(RubyLinter):
     defaults = {
         'selector': 'source.puppet'
     }
-    cmd = ('puppet-lint', '--log-format', '%{line}:%{column}:%{kind}:%{message}', '*')
+
+    cmd = ('puppet-lint', '--log-format', '%{line}:%{column}:%{kind}:%{message}')
     regex = (
         r'^(?P<line>\d+):(?P<col>\d+):'
         r'((?P<warning>warning)|(?P<error>error)):'
