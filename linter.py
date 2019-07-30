@@ -17,7 +17,9 @@ class PuppetLint(RubyLinter):
 
     """Provides an interface to puppet-lint."""
 
-    syntax = 'puppet'
+    defaults = {
+        'selector': 'source.puppet'
+    }
     cmd = ('puppet-lint', '--log-format', '%{line}:%{column}:%{kind}:%{message}', '*')
     executable = None
     regex = (
