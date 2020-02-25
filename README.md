@@ -3,6 +3,10 @@ SublimeLinter-contrib-puppet-lint
 
 This linter plugin for [SublimeLinter][docs] provides an interface to [puppet-lint](http://puppet-lint.com/). It will be used with files that have the “Puppet” syntax.
 
+*note*
+
+I'm no longer using Puppet or Sublime Text actively so I may be slow to review things here.
+
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
 
