@@ -35,6 +35,19 @@ To install via Package Control, do the following:
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings][settings]. For information on generic linter settings, please see [Linter Settings][linter-settings].
 
+### Bundler
+If you are using Bundler and would like to use the locked puppet-lint version, you must set `use_bundle_exec` to true:
+
+```json
+{ 
+    "linters": {
+        "puppetlint": {
+            "use_bundle_exec": true
+        }
+    }
+}
+```
+
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
 
